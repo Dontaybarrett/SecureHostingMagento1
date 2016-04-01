@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   Mage
+ * @package    Paygate_SecureHosting
+ */
+-->
+<config>
+    <modules>
+        <Paygate_SecureHosting>
+            <version>1.2.0</version>
+        </Paygate_SecureHosting>
+    </modules>
+    <global>
+        <models>
+            <securehosting>
+                <class>Paygate_SecureHosting_Model</class>
+                <resourceModel>securehosting_resource</resourceModel>
+            </securehosting>
+            <securehosting_resource>
+                <class>Paygate_SecureHosting_Model_Resource</class>
+                <entities>
+                    <api_debug>
+                        <table>securehosting_api_debug</table>
+                    </api_debug>
+                </entities>
+            </securehosting_resource>
+        </models>
+
+        <resources>
+            <securehosting_setup>
+                <setup>
+                    <module>Paygate_SecureHosting</module>
+                </setup>
+            </securehosting_setup>
+        </resources>
+        <blocks>
+            <securehosting>
+                <class>Paygate_SecureHosting_Block</class>
+            </securehosting>
+        </blocks>
+        <helpers>
+            <securehosting>
+                <class>Paygate_SecureHosting_Helper</class>
+            </securehosting>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <securehosting>
+                <use>standard</use>
+                <args>
+                    <module>Paygate_SecureHosting</module>
+                    <frontName>securehosting</frontName>
+                </args>
+            </securehosting>
+        </routers>
+        <layout>
+            <updates>
+                <securehosting>
+                    <file>paygate/securehosting.xml</file>
+                </securehosting>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <payment>
+            <securehosting>
+                  <active>0</active>
+                  <model>securehosting/redirect</model>
+                  <title>Credit/Debit Card</title>
+                  <order_status>pending</order_status>
+                  <redirect_message>You will be redirected to the Secure Hosting and Payments website when you place an order.</redirect_message>
+				  <shreference>SH000000</shreference>
+				  <checkcode>000000</checkcode>
+				  <filename>magento_template.html</filename>
+                  <activate_as>0</activate_as>
+                  <testmode>0</testmode>
+				  <auto_invoice>1</auto_invoice>
+            </securehosting>
+        </payment>
+    </default>
+</config>

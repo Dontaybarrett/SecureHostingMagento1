@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Payment Confirmation Redirect</title>
+			<script type="text/javascript">
+				var trannum = $trannum;
+				if(trannum = ''){
+				location.href="$success_url";
+				}else{				
+				location.href="$success_url&transactionreference=$trannum&transactiondate=$transactiondate&transactiontime=$transactiontime&cv2avsresult=$cv2av";
+				}
+			</script>
+		</head>
+	<body>
+		You are about to be redirected - please wait ...
+	</body>
+</html>
