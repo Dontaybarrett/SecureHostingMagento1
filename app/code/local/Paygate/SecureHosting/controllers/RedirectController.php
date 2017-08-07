@@ -129,7 +129,7 @@ protected $_order;
 					throw new Exception('Callback error - Order with given ID: "'.$this->getRequest()->getParam('orderid').'" not found');
 				}
 
-				if($config->autoInvoice() AND $order->canInvoice()){
+				if($config->autoInvoice()){
 					$invoice = $order->prepareInvoice();
 					$invoice->register();
 					Mage::getModel('core/resource_transaction')
