@@ -51,7 +51,7 @@
 = Advanced Secuitems =
 ======================
 
-The Secure Hosting and Payments system supports the facility to secure your checkout from tempering, the facility is supported
+The Secure Hosting and Payments system supports the facility to secure your checkout from tampering, the facility is supported
 by the Advanced Secuitems feature. In order for the Advanced Secuitems to work correctly, it must be correctly configured in
 both the Magento Admin Interface and your Secure Hosting and Payments account. The settings for the Advanced Secuitems functionality
 within your Secure Hosting and Payments account are found within the Advanced Settings section of the account.
