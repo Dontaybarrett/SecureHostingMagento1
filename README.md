@@ -29,10 +29,9 @@
 	- File Name - This is the file name of the payment page template you need to upload to your Secure Hosting and Payments account. The file name of the example template provided with this integration module is 
 		"magento_template.html". You can rename this file if you desire, you only need to ensure the name of the file you upload to your Secure Hosting and Payments account is correctly set here.
 
-5.  =================
-	= Shared Secret =
+5.      Shared Secret
 	=================
-	The Magento integration uses the Callbacks from Secure Hosting feature to update your Magento backend, confirming that an order has been placed. It is strongly recommended that the Callbacks are secured by a Shared Secret value, generating a unique verification string, known only to yourself and Secure Hosting. In order to activate the Shared Secret callback verification, enter your Shared Secret value in the Magento admin interface and within the Advanced Settings of your Secure Hosting account. The Shared Secret value can be anything you want, it just needs to be the same in both Magento and Secure Hosting. For more information on verifying Callbacks, please refer to page 22 of the SHP Technical Integration Guide which can be found https://cs.monek.com/portal/kb/articles/shp-technical-integration-guide.
+	The Magento integration uses the Callbacks from Secure Hosting feature to update your Magento backend, confirming that an order has been placed. It is strongly recommended that the Callbacks are secured by a Shared Secret value, generating a unique verification string, known only to yourself and Secure Hosting. The secret phrase should be 8 characters or longer. In order to activate the Shared Secret callback verification, enter your Shared Secret value in the Magento admin interface and within the Advanced Settings of your Secure Hosting account. The Shared Secret value can be anything you want, it just needs to be the same in both Magento and Secure Hosting. For more information on verifying Callbacks, please refer to page 22 of the SHP Technical Integration Guide which can be found https://cs.monek.com/portal/kb/articles/shp-technical-integration-guide.
 
 6.  The transaction process is as follows:
 	- Customer redirects from your website to the Secure Hosting payment template to enter card details. (Order is created within Magento and is set to Pending).
