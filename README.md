@@ -41,7 +41,7 @@
 	- Secure Hosting makes a callback to your website to confirm payment has been made. (Order is updated to Complete).
 	- Goods can now be shipped.
 
-8.	You can enable test mode and put through test transactions using the test card details within our integration guide. Don't forget to turn this off before going live!
+7.	You can enable test mode and put through test transactions using the test card details within our integration guide. Don't forget to turn this off before going live!
 
 
 ==========================
