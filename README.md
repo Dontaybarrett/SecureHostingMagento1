@@ -1,8 +1,7 @@
-# cart_legacy_magento
+# Legacy Magento Cart
 
-===============
-= Installation  =
-===============
+## Installation
+
 
 1.	Copy the directory "app" to the root of your shopping cart where you should already find directory called "app".
 
@@ -29,9 +28,7 @@
 	- File Name - This is the file name of the payment page template you need to upload to your Secure Hosting and Payments account. The file name of the example template provided with this integration module is 
 		"magento_template.html". You can rename this file if you desire, you only need to ensure the name of the file you upload to your Secure Hosting and Payments account is correctly set here.
 
-5.      Shared Secret
-	=================
-	The Magento integration uses the Callbacks from Secure Hosting feature to update your Magento backend, confirming that an order has been placed. It is strongly recommended that the Callbacks are secured by a Shared Secret value, generating a unique verification string, known only to yourself and Secure Hosting. The secret phrase should be 8 characters or longer. In order to activate the Shared Secret callback verification, enter your Shared Secret value in the Magento admin interface and within the Advanced Settings of your Secure Hosting account. The Shared Secret value can be anything you want, it just needs to be the same in both Magento and Secure Hosting. For more information on verifying Callbacks, please refer to page 22 of the SHP Technical Integration Guide which can be found https://cs.monek.com/portal/kb/articles/shp-technical-integration-guide.
+5. The Magento integration uses the Callbacks from Secure Hosting feature to update your Magento backend, confirming that an order has been placed. It is strongly recommended that the Callbacks are secured by a Shared Secret value, generating a unique verification string, known only to yourself and Secure Hosting. The secret phrase should be 8 characters or longer. In order to activate the Shared Secret callback verification, enter your Shared Secret value in the Magento admin interface and within the Advanced Settings of your Secure Hosting account. The Shared Secret value can be anything you want, it just needs to be the same in both Magento and Secure Hosting. For more information on verifying Callbacks, please refer to page 22 of the SHP Technical Integration Guide which can be found https://cs.monek.com/portal/kb/articles/shp-technical-integration-guide.
 
 6.  The transaction process is as follows:
 	- Customer redirects from your website to the Secure Hosting payment template to enter card details. (Order is created within Magento and is set to Pending).
@@ -42,13 +39,11 @@
 7.	You can enable test mode and put through test transactions using the test card details within our integration guide. Don't forget to turn this off before going live!
 
 
-==========================
-= Advanced Configuration =
-==========================
 
-======================
-= Advanced Secuitems =
-======================
+## Advanced Configuration
+
+### Advanced Secuitems
+
 
 The Secure Hosting and Payments system supports the facility to secure your checkout from tampering, the facility is supported
 by the Advanced Secuitems feature. In order for the Advanced Secuitems to work correctly, it must be correctly configured in
@@ -67,5 +62,5 @@ within your Secure Hosting and Payments account are found within the Advanced Se
 	
 3.	Shopping Cart Referrer - As part of the security in generating the encrypted string, the Secure Hosting and Payments system needs to verify the
 		shopping cart request, this is done by checking the referrer. The referrer configured here must match the referrer configured within your
-		Secure Hosting and Payments account within the Advances Settings. An example referrer for your site would be "http://www.mysite.com/index.php".
+		Secure Hosting and Payments account within the Advances Settings. An example referrer for your site would be "http://www.example.com/index.php".
 
